@@ -20,8 +20,10 @@ export function ThemeToggle({ className }: { className?: string }) {
     document.documentElement.classList.toggle("dark", next);
     // keep the browser chrome (Safari status bar / Dynamic Island) tinted to match
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next ? "#0a0a0a" : "#f7f6f3");
+    const val = next ? "dark" : "light";
+    document.cookie = `${KEY}=${val}; path=/; max-age=31536000; SameSite=Lax`;
     try {
-      localStorage.setItem(KEY, next ? "dark" : "light");
+      localStorage.setItem(KEY, val);
     } catch {
       /* ignore */
     }

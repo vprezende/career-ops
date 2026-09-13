@@ -1,13 +1,28 @@
 # career-ops web — self-contained ignore (does not touch core root .gitignore)
+
+# Next.js Framework
 /node_modules
 /.next*
-/out
-/dist
-/.turbo
 *.tsbuildinfo
 next-env.d.ts
+
+# Build Caches & Export Bundles
+/.turbo
+/out
+/dist
+
+# Environment & OS
 .env*.local
 .DS_Store
+
+# Logs
+yarn-error.log*
+
+# Package Manager Cache (.yarn)
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
 
 # local QA artifacts (screenshots live in the workspace root, outside this tree)
 .playwright-mcp/
