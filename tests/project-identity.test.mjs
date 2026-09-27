@@ -48,6 +48,8 @@ test('every short blurb describes the same project in the same words', () => {
     ['package.json', pkg.description],
     ['.claude-plugin/plugin.json', JSON.parse(read('.claude-plugin/plugin.json')).description],
     ['.github/plugin/plugin.json', JSON.parse(read('.github/plugin/plugin.json')).description],
+    ['.codex-plugin/plugin.json', JSON.parse(read('.codex-plugin/plugin.json')).description],
+    ['.kimi-plugin/plugin.json', JSON.parse(read('.kimi-plugin/plugin.json')).description],
     ['.claude-plugin/marketplace.json metadata', marketplace.metadata?.description],
     // Enumerated from the file, not from a count kept here: a marketplace with a
     // second plugin one day should widen this automatically.

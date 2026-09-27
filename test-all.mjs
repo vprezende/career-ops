@@ -1929,6 +1929,7 @@ for (const f of skillEntrypoints) {
   const mirrors = [
     ['.github/plugin/plugin.json', 'awesome-copilot validator needs it'],
     ['.codex-plugin/plugin.json', 'awesome-ai-plugins resolves the Codex install_url to it'],
+    ['.kimi-plugin/plugin.json', 'Kimi Code CLI plugin manifest'],
   ];
   for (const [mirrorPath, why] of mirrors) {
     const mirror = fileExists(mirrorPath) ? readFile(mirrorPath) : null;
@@ -2092,7 +2093,7 @@ const allowedFiles = [
 const exactAllowedFiles = new Set([
   // GitHub Sponsors funding target + Codex plugin manifest (#4131) — same
   // maintainer-credit shape as the .claude-plugin/.github/plugin ones above.
-  'funding.json', '.codex-plugin/plugin.json',
+  'funding.json', '.codex-plugin/plugin.json', '.kimi-plugin/plugin.json',
   // Hired Wall: celebrates a hire with a link back to the project, and the
   // scripts/tests that build and cover that feature necessarily carry the
   // same URL (#4131).
